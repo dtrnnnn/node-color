@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        text-align: center;
+        
+    }
+    .div1, .main{
+        background-color: grey;
+    }
+    header{
+        height: 134px;
+        background-color:royalblue;
+    }
+</style>
+
+<body>
+    <header><h1>Click buttons on under the docoment:</h1></header>
+    <div class="main">
+        <button onclick="document.body.style.backgroundColor = 'red' ">red</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'orange' ">orange</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'yellow' ">yellow</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'green' ">green</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'darkgreen' ">darkgreen</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'blue' ">blue</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'darkblue' ">darkblue</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'purple' ">purple</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'pink' ">pink</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'magenta' ">magenta</button>
+    </div>
+    <div class="div1">
+        <button>costom</button>
+    </div>
+</body>
+<script>
+    const m = document.querySelector(".main")
+    const a = document.querySelector('.div1')
+
+    a.addEventListener(
+        "click",
+        function () {
+
+            const note = document.createElement('div');
+            let a = prompt("enter a background colour, you can also write colour  in RGB, HEX and HSL")
+            note.innerHTML = `
+            <button onclick="document.body.style.backgroundColor = '${a}'">${a}</button>`;
+            m.append(note)
+        })
+
+</script>
+
+</html>
