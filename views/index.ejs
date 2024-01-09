@@ -4,16 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>color changer</title>
 </head>
-<link rel="stylesheet" href="/public/style.css">
+<style>
+    * {
+    margin: 0;
+}
+
+body {
+    text-align: center;
+}
+
+.main,
+.div1 {
+    text-decoration: double;
+    background-color: wheat;
+}
+
+header {
+    height: 135px;
+    background-color: blue;
+}
+.div1{
+    height: 21px;
+    background-color: wheat;
+}
+.div2{
+    height: 259px;
+}
+</style>
 
 <body>
-    <header><h1>Click buttons on under the docoment:</h1></header>
+    <header>
+        <h1>Click buttons on under the docoment:</h1>
+    </header>
     <div class="main">
         <button onclick="document.body.style.backgroundColor = 'red' ">red</button>
         <br>
-        <button onclick="document.body.style.backgroundColor = 'orange' ">orange</button>
+        <button onclick="document.body.style.backgroundColor = 'rgb(255, 103, 47)' ">orange</button>
         <br>
         <button onclick="document.body.style.backgroundColor = 'yellow' ">yellow</button>
         <br>
@@ -23,6 +51,8 @@
         <br>
         <button onclick="document.body.style.backgroundColor = 'blue' ">blue</button>
         <br>
+        <button onclick="document.body.style.backgroundColor = 'rgb(0,0,128)' ">navy blue</button>
+        <br>
         <button onclick="document.body.style.backgroundColor = 'darkblue' ">darkblue</button>
         <br>
         <button onclick="document.body.style.backgroundColor = 'purple' ">purple</button>
@@ -30,11 +60,32 @@
         <button onclick="document.body.style.backgroundColor = 'pink' ">pink</button>
         <br>
         <button onclick="document.body.style.backgroundColor = 'magenta' ">magenta</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'rgb(255,215,0)' ">golden</button>
+        <br>
+        <button onclick="document.body.style.backgroundColor = 'rgb(192,192,192)' ">silver</button>
+        <br>
     </div>
     <div class="div1">
         <button>costom</button>
     </div>
+    <div class="div2">
+    </div>
 </body>
-<script src="/public/script.js"></script>
+<script>
+    const m = document.querySelector(".main")
+    const a = document.querySelector('.div1')
+
+    a.addEventListener(
+        "click",
+        function () {
+
+            const note = document.createElement('div');
+            let a = prompt("enter a background colour, you can also write colour  in RGB, HEX and HSL")
+            note.innerHTML = `
+        <button onclick="document.body.style.backgroundColor = '${a}'">${a}</button>`;
+            m.append(note)
+        })
+</script>
 
 </html>

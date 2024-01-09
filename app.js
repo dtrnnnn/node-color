@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express()
-const port = 1234
+const port = 1106
 app.set('view engine', 'ejs');
 
 app.listen(port, () => {
