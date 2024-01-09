@@ -6,23 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        text-align: center;
-        
-    }
-    .div1, .main{
-        background-color: grey;
-    }
-    header{
-        height: 134px;
-        background-color:royalblue;
-    }
-</style>
+<link rel="stylesheet" href="/public/style.css">
 
 <body>
     <header><h1>Click buttons on under the docoment:</h1></header>
@@ -51,21 +35,6 @@
         <button>costom</button>
     </div>
 </body>
-<script>
-    const m = document.querySelector(".main")
-    const a = document.querySelector('.div1')
-
-    a.addEventListener(
-        "click",
-        function () {
-
-            const note = document.createElement('div');
-            let a = prompt("enter a background colour, you can also write colour  in RGB, HEX and HSL")
-            note.innerHTML = `
-            <button onclick="document.body.style.backgroundColor = '${a}'">${a}</button>`;
-            m.append(note)
-        })
-
-</script>
+<script src="/public/script.js"></script>
 
 </html>
